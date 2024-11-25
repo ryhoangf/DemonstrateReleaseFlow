@@ -1,5 +1,9 @@
+package hust.soict.dsai.aims.cart;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -17,6 +21,7 @@ public class Cart {
             }
         }
     }
+
     // Add two DVDs at once
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
