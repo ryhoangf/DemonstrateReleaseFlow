@@ -1,14 +1,12 @@
+package hust.soict.dsai.aims.disc;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
     private String director;
     private int length;
     private float cost;
-
-    // Static variable to track the total number of DVDs created
     private static int nbDigitalVideoDiscs = 0;
-
-    // Instance variable to store the unique ID of the DVD
     private int id;
 
     // Getter methods

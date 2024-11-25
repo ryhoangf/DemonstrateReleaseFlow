@@ -1,3 +1,6 @@
+package hust.soict.dsai.test.disc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class TestPassingParameter {
 
     public static void main(String[] args) {
@@ -25,13 +28,10 @@ public class TestPassingParameter {
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
     }
 
-    // Swap the first two DVD objects in the array
     public static void swap(DigitalVideoDisc[] dvds) {
-        if (dvds.length >= 2) {
             DigitalVideoDisc temp = dvds[0];
             dvds[0] = dvds[1];
             dvds[1] = temp;
-        }
     }
 
     // Change the title of the given DVD object
