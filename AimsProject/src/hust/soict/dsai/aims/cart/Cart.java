@@ -17,7 +17,6 @@ public class Cart {
             }
         }
     }
-
     // Add two DVDs at once
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
