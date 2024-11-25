@@ -5,33 +5,13 @@ public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private List<DigitalVideoDisc> itemsOrdered = new ArrayList<>();
 
-    // Add a list of DVDs using an array
-    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-        for (DigitalVideoDisc disc : dvdList) {
-            if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
-                itemsOrdered.add(disc);
-                System.out.println("The disc \"" + disc.getTitle() + "\" has been added");
-            } else {
-                System.out.println("The cart is full. Cannot add \"" + disc.getTitle() + "\"");
-                break;
-            }
-        }
-    }
-
-    // Add two DVDs at once
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+    // Add a DVD to the cart
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
-            itemsOrdered.add(dvd1);
-            System.out.println("The disc \"" + dvd1.getTitle() + "\" has been added");
+            itemsOrdered.add(disc);
+            System.out.println("The disc has been added.");
         } else {
-            System.out.println("The cart is full. Cannot add \"" + dvd1.getTitle() + "\"");
-        }
-
-        if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
-            itemsOrdered.add(dvd2);
-            System.out.println("The disc \"" + dvd2.getTitle() + "\" has been added");
-        } else {
-            System.out.println("The cart is full. Cannot add \"" + dvd2.getTitle() + "\"");
+            System.out.println("The cart is full.");
         }
     }
 
@@ -103,28 +83,4 @@ public class Cart {
         }
         System.out.println("Total cost: $" + totalCost());
     }
-
-    // Search for DVDs by ID
-    public DigitalVideoDisc searchById(int id) {
-        for (DigitalVideoDisc disc : itemsOrdered) {
-            if (disc.getId() == id) {
-                return disc;
-            }
-        }
-        return null; 
-    }
-    // Print the list of DVDs in the cart
-    public void print() {
-        System.out.println("***********************CART***********************");
-        System.out.println("Ordered Items:");
-        float totalCost = 0;
-        for (int i = 0; i < itemsOrdered.size(); i++) {
-            DigitalVideoDisc disc = itemsOrdered.get(i);
-            System.out.println((i + 1) + ". " + disc.toString());
-            totalCost += disc.getCost();
-        }
-        System.out.println("Total cost: $" + totalCost);
-        System.out.println("***************************************************");
-    }
-
 }

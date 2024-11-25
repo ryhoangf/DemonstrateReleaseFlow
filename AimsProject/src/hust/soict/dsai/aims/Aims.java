@@ -8,16 +8,10 @@ public class Aims {
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
 
-        // Add individual DVDs to the cart
-        anOrder.addDigitalVideoDisc(dvd1, dvd2);
-
-
-        // Create a DVD array using existing DVDs
-        DigitalVideoDisc[] dvdArray = { dvd1, dvd2, dvd3 };
-
-        // Add multiple DVDs to the cart using an array
-        anOrder.addDigitalVideoDisc(dvdArray);
-                
+        // Add DVDs to the cart
+        anOrder.addDigitalVideoDisc(dvd1);
+        anOrder.addDigitalVideoDisc(dvd2);
+        anOrder.addDigitalVideoDisc(dvd3);
 
         // Display cart contents
         anOrder.displayCart();
