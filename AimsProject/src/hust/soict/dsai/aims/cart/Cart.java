@@ -5,6 +5,13 @@ public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private List<DigitalVideoDisc> itemsOrdered = new ArrayList<>();
 
+    // Add a DVD to the cart
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+        if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
+            itemsOrdered.add(disc);
+            System.out.println("The disc has been added.");
+        } else {
+            System.out.println("The cart is full.");
     // Add a list of DVDs using an array
     public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
         for (DigitalVideoDisc disc : dvdList) {
