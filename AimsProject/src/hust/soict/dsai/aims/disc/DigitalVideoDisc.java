@@ -9,6 +9,7 @@ public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
     private int id;
 
+    // Getter methods
     public String getTitle() {
         return title;
     }
